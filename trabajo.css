@@ -1,0 +1,560 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+:root {
+  --color-primario: #ec93e0;
+  
+  --color-rosado: hsl(295, 66%, 66%);
+  --color-rosado-claro: hsl(313, 78%, 65%);
+}
+body {
+    background-color: #eee; 
+    overflow-x:hidden;
+  font-family: "Roboto", sans-serif;
+} 
+
+h1, h2 {
+  color: #444;
+  text-align: center;
+  margin: 40px 0px;
+}
+
+/* CABECERA */
+.header {
+   height: 60px; 
+   background: -webkit-linear-gradient(left, var(--color-primario), #df39c3);
+  display: flex;
+  box-shadow: #888 0px 0px 20px;
+}
+
+.header__contenedor {
+  display: flex;
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  padding-bottom: 28px; 
+  
+}
+
+.header__logo img {
+  height: 100%;
+}
+
+.header__navegacion {
+  flex: 1;
+  display: flex;
+
+}
+.header__lista {
+  flex: 1;
+  list-style: none;
+  display: flex;
+}
+
+.header__item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.header__item:hover {
+  background-color: var(--color-primario);
+  flex: 1.4;
+}
+
+.header__link {
+  text-decoration: none;
+  color: white;
+}
+
+.header__icon{
+display: none;
+color: white;
+}
+/* FIN CABECERA */
+
+
+
+
+/* INICIO TIPOS DE PRODUCTO */
+.contenedor__imagen{
+  display: flex;
+
+  justify-content: center;
+
+}
+.tipo_ropa{
+  width: 200px;
+  height: 200px;
+  margin-top: 50px ;
+  border-radius: 50%;
+  margin: 50px; 
+  text-align: center;
+}
+ 
+.card__ropa img {
+  width: 200px;
+  height: 200px; 
+  border-radius: 50%;
+}
+/* FIN TIPOS DE PRODUCTO */
+
+
+
+/*IMAGEN PRINCIPAL*/
+.imagen_principal{
+  background-image: url("./IMAGENES/fondo.jpg");
+   background-repeat: repeat-x; 
+   margin-top: 60px;
+   
+}
+/*FIN IMAGEN PRINCIPAL*/
+
+
+
+
+
+/* INICIO CARDS */
+
+.cards {
+  padding: 0 50px 50px 50px;
+  text-align: center;
+
+}
+
+.color-primario {
+  color: var(--color-primario);
+}
+
+.card {
+  height: 400px;
+  width: 300px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 2px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 20px;
+}
+.card,
+.card * {
+  transition: all 0.2s ease;
+  
+}
+
+.card__imagen {
+  height: 90%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card__imagen img {
+  width: 100%;
+  transform: translate(0, -60px);
+  margin-top: 80px; 
+}
+
+.card__photos {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-primario);
+  color: white;
+  padding: 8px 11px;
+  border-radius: 1px;
+    
+}
+
+.card__fecha {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primario);
+  color: white;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 0.8rem;
+  padding-top: 9px;
+}
+
+.card__fecha span {
+  font-size: 0.6rem;
+}
+
+.card__info {
+  padding: 20px;
+  position: relative;
+  height: 40%;
+}
+
+.card__subtitulo {
+  color: var(--color-primario);
+  margin-top: 5px;
+}
+
+.card__feed {
+  color: #888;
+  position: absolute;
+  bottom: 20px;
+}
+
+.card__descripcion {
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #333;
+  line-height: 1.1rem;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.card:hover .card__imagen {
+  height: 40%;
+}
+
+.card:hover .card__imagen img {
+  filter: brightness(0.5);
+}
+
+.card:hover .card__info {
+  height: 60%;
+}
+
+.card:hover .card__descripcion {
+  visibility: visible;
+  opacity: 1;
+}
+.card:hover {
+  box-shadow: #bbb 0px 0px 20px;
+  transform: scale(1.05);
+}
+
+
+/* FIN CARDS */
+
+
+
+
+
+/* INICIO DESCRIPCIÓIN TIPO ROPA*/
+
+ .contenedor-tallas{
+   /* background-color: red; */
+   align-content:space-between;
+   
+ }
+
+ .tallas,.contenedor-tallas{
+  text-align: center;
+   
+ }
+
+ .cards-tipo-ropa{
+   /* background-color: royalblue;  */
+  display: flex; 
+  justify-content: center;
+ }
+
+
+.card-tipo-ropa {
+  height: 700px;
+  width: 500px;
+  background-color: white;
+  cursor: pointer; 
+  margin-top: 20px;  
+   
+}
+
+.contenedor-tallas{ 
+  margin-top: 200px;
+}
+ 
+.card__imagen-tipo-ropa {
+  height: 100%;
+   overflow: hidden; 
+  position: relative;
+}
+
+.card__imagen-tipo-ropa img {
+  width: 100%;
+  transform: translate(0, -60px);
+  margin-top: 80px; 
+}
+
+.tipo_ropa-tipo-ropa{
+  width: 40px;
+  height: 40px;
+  /* margin-top: 10px ; */
+  border-radius: 50%;
+  margin: 10px;
+  margin-bottom: 80px;
+  margin-left: 80px;
+  cursor: pointer;
+}
+ 
+.card__ropa-tipo-ropa img {
+  width: 120px;
+  height: 120px; 
+  border-radius: 50%; 
+}
+ 
+
+
+.boton__cabecera {
+    width: 180px;
+    height: 35px;
+    border-radius:35px;
+    background: linear-gradient(90deg, var(--color-primario),var(--color-rosado-claro));
+    color: var(--color-blanco);
+    border: none;
+    cursor: pointer; 
+    align-content: center;
+  } 
+
+
+
+
+
+
+/* FIN DESCRIPCIÓIN TIPO ROPA */
+ 
+
+/*INICIO CARRITO COMPRA*/
+
+
+.cards-carrito{
+   /* background-color: royalblue;   */
+ display: flex; 
+ justify-content: center;
+ 
+}
+
+.card-carrito {
+ height: 250px;
+ width: 20%;
+ background-color: white;
+ cursor: pointer; 
+ margin-top: 20px;  
+ margin-bottom: 20px; 
+ 
+}
+
+.card__imagen-carrito {
+  height: 100%;
+  width: 150px;
+ margin-left: 100px;
+   
+   
+}
+
+.card__imagen-carrito img {
+  width: 100%;
+  transform: translate(0, -60px);
+  margin-top: 80px;  
+ 
+}
+
+.contenedor-carrito{ 
+    margin-top: 30px;
+     
+}
+
+
+.boton__cabecera-carrito {
+  width: 20px;
+  height: 25px;
+  border-radius:50px;
+  background: linear-gradient(90deg, var(--color-primario),var(--color-rosado-claro));
+  color: var(--color-blanco);
+  border: none;
+   cursor: pointer;
+  align-content: center;  
+  
+} 
+
+
+.boton__carrito {
+  width: 180px;
+  height: 35px;
+  border-radius:35px;
+  background: linear-gradient(90deg, var(--color-primario),var(--color-rosado-claro));
+  color: var(--color-blanco);
+  border: none;
+  cursor: pointer;  
+  margin-left: 45%; 
+  margin-bottom: 20px;
+} 
+
+
+/*FIN CARRITO COMPRA*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FORMULARIO INGRESO A LA PLATAFORMA */
+
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #888;
+  width: 500px;
+  height: 200px;
+  margin: 40px auto 40px auto; 
+}
+
+form input {
+  width: 100%;
+}
+.text-success {
+  color: #30a720;
+}
+.text-danger {
+  color: crimson;
+} 
+
+
+
+/* FIN FORMULARIO INGRESO A LA PLATAFORMA */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------- INICIO FOOTER  -----------*/
+
+.footer_principal {
+  height: 200px;  
+  max-width: 100%;
+  background: -webkit-linear-gradient(left, var(--color-primario), #df39c3);
+  
+} 
+
+
+.footer__navegacion{  
+  /* background-color: #eee;    */
+   width: 100%;
+   height: 100px;
+  } 
+
+.footer__lista{  
+  /* background-color: blue;    */
+  height: 100%;
+  display: flex;  
+  justify-content: space-around;
+} 
+ 
+.footer__item{   
+  list-style: none;  
+  margin-top: 40px;
+  } 
+
+
+  .footer__icono {
+    width: 100%;   
+     text-align: center;
+  }
+
+  .footer__icono__tc {
+    width: 100%;   
+     display: flex;  
+     margin-left: 1490px;
+  }
+
+  .fotter__img__tc {
+    width: 100px;    
+    /* display: flex;   */
+   margin-left: 10px;
+  }
+/*----------- FIN FOOTER  --------------*/
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+/* INICIO MEDIA QUERY */
+
+@media screen and (max-width: 480px){
+  .header:hover .header__lista{
+      /* display: flex; */
+      height: 120px;
+  }
+  .header__lista{
+      overflow: hidden;
+      transition: all 0.2s ease;
+       /* display: none;  */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: -webkit-linear-gradient(left, var(--color-primario), #ee9389);
+      height:0;
+  }
+  .header__icon{
+      display: inline-block;
+      margin-right: 40px;
+  }
+  .header__navegacion{
+      justify-content: flex-end;
+      align-items: center;
+  }
+
+}
+
+/* FIN MEDIA QUERY */
+
+ 
